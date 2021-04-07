@@ -3,6 +3,8 @@
     "displayName": "ecp",
     "description": "Extended Compiler-Friendly Pseudocode",
     "version": "0.0.1",
+    "icon": "icon.ico",
+    "publisher": "Conqu3red",
     "author": {
         "name": "Conqu3red",
         "url": "https://github.com/Conqu3red/"
