@@ -5,6 +5,10 @@
     "version": "0.0.1",
     "icon": "icon.ico",
     "publisher": "Conqu3red",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Conqu3red/vscode-ecp"
+    },
     "author": {
         "name": "Conqu3red",
         "url": "https://github.com/Conqu3red/"
