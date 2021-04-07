@@ -1,0 +1,100 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ECP",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+        {
+            "include": "#strings2"
+        },
+        {
+            "include": "#comment"
+        },
+        {
+            "include": "#number"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#constant_t"
+        },
+        {
+            "include": "#builtin_functions"
+        }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.ecp",
+				"match": "\\b(SUBROUTINE|ENDSUBROUTINE|RETURN|CONTINUE|BREAK|OUTPUT|IF|THEN|ELSE|ENDIF|WHILE|ENDWHILE|REPEAT|UNTIL|FOR|TO|IN|STEP|ENDFOR|RECORD|ENDRECORD)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.ecp",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ecp",
+					"match": "\\\\."
+				},
+                {
+                    "include": "#comment"
+                }
+			]
+		},
+        "strings2": {
+            "name": "string.quoted.single.ecp",
+			"begin": "'",
+			"end": "'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.ecp",
+					"match": "\\\\."
+				},
+                {
+                    "include": "#comment"
+                }
+			]
+        },
+        "comment": {
+            "name": "comment",
+            "match": "(#.*)",
+            "patterns": [
+				{
+					"name": "constant.character.escape.ecp",
+					"match": "\\\\."
+				}
+			]
+        },
+        "number": {
+            "name": "constant.numeric",
+            "match": "(\\d+(?:\\.\\d+)?)"
+        },
+        "operators": {
+            "name": "keyword.operator",
+            "match": "(←|:=|=|\\+|\\*|-|–|DIV|MOD|\\/|\\*\\*|POW|!=|<=|>=|<|>|≠|≤|≥|NOT|OR|AND)"
+        },
+        "types": {
+            "name": "support.type.python",
+            "match": "(Integer|Int|Real|Bool|String|Array|Record)"
+        },
+        "constant_t": {
+            "name": "constant.language.python",
+            "match": "(True|False)"
+        },
+        "builtin_functions": {
+            "name": "support.function.builtin.python",
+            "match": "(USERINPUT|LEN|POSITION|SUBSTRING|STRING_TO_INT|STRING_TO_REAL|INT_TO_STRING|REAL_TO_STRING|CHAR_TO_CODE|CODE_TO_CHAR|RANDOM_INT|SQRT|math)"
+        }
+	},
+	"scopeName": "source.ecp"
+}

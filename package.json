@@ -1,0 +1,25 @@
+{
+    "name": "ecp",
+    "displayName": "ecp",
+    "description": "Extended Compiler-Friendly Pseudocode",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ecp",
+            "aliases": ["ECP", "ecp"],
+            "extensions": [".ecp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ecp",
+            "scopeName": "source.ecp",
+            "path": "./syntaxes/ecp.tmLanguage.json"
+        }]
+    }
+}
