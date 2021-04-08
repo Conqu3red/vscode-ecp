@@ -1,35 +1,49 @@
 {
-    "name": "ecp",
-    "displayName": "ecp",
-    "description": "Extended Compiler-Friendly Pseudocode",
-    "version": "0.0.1",
-    "icon": "icon.ico",
-    "publisher": "Conqu3red",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/Conqu3red/vscode-ecp"
-    },
-    "author": {
-        "name": "Conqu3red",
-        "url": "https://github.com/Conqu3red/"
-    },
-    "engines": {
-        "vscode": "^1.55.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "ecp",
-            "aliases": ["ECP", "ecp"],
-            "extensions": [".ecp"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "ecp",
-            "scopeName": "source.ecp",
-            "path": "./syntaxes/ecp.tmLanguage.json"
-        }]
-    }
+	"name": "ecp",
+	"displayName": "ecp",
+	"description": "Extended Compiler-Friendly Pseudocode",
+	"version": "0.0.1",
+	"icon": "icon.ico",
+	"publisher": "Conqu3red",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Conqu3red/vscode-ecp"
+	},
+	"author": {
+		"name": "Conqu3red",
+		"url": "https://github.com/Conqu3red/"
+	},
+	"engines": {
+		"vscode": "^1.55.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "ecp",
+				"aliases": [
+					"ECP",
+					"ecp"
+				],
+				"extensions": [
+					".ecp"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "ecp",
+				"scopeName": "source.ecp",
+				"path": "./syntaxes/ecp.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "5327d2b2-0d51-4b13-b6f9-b175077811ea",
+		"publisherDisplayName": "Conqu3red",
+		"publisherId": "accd1409-f75b-426f-a02e-38d53a79c716"
+	}
 }
